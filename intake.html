@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026 설 건강 판정 시스템 | 바디올한의원 씨알공진단</title>
     <link rel="icon" href="https://raw.githubusercontent.com/bodyallhani/gen-intake/main/bodyall.png" type="image/png">
-    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap');
         :root {
@@ -14,124 +13,90 @@
         }
         body { margin: 0; font-family: 'Pretendard', sans-serif; background: var(--bg); color: var(--primary); line-height: 1.6; word-break: keep-all; }
         .container { max-width: 480px; margin: 0 auto; min-height: 100vh; background: var(--white); box-shadow: 0 0 20px rgba(0,0,0,0.05); position: relative; }
-        
         .event-banner { background: var(--primary); color: var(--accent); text-align: center; padding: 12px; font-weight: bold; font-size: 0.9rem; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--accent); }
-        .event-banner span { color: var(--white); }
-
         section { display: none; padding: 40px 24px; animation: fadeIn 0.6s ease; }
         section.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
         .logo-area { text-align: center; margin-bottom: 30px; }
         .logo-img { width: 140px; }
-
         h1 { font-size: 1.6rem; text-align: center; margin-bottom: 20px; font-weight: 800; }
         .serif { font-family: 'Noto Serif KR', serif; }
-        
         .visual-img { width: 100%; border-radius: 15px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .data-img { width: 100%; border-radius: 10px; margin: 15px 0; border: 1px solid #eee; }
-
         .btn { display: block; width: 100%; padding: 22px; border-radius: 12px; border: none; font-size: 1.15rem; font-weight: 700; cursor: pointer; transition: 0.3s; margin-bottom: 12px; text-decoration: none; text-align: center; box-sizing: border-box;}
-        .btn-gold { background: var(--accent); color: var(--white); box-shadow: 0 4px 10px rgba(197, 160, 89, 0.3); }
+        .btn-gold { background: var(--accent); color: var(--white); }
         .btn-kakao { background: #fee500; color: #3c1e1e; font-size: 1.2rem; }
-        .btn-outline { background: var(--white); border: 1px solid var(--accent); color: var(--accent); }
-        
         .card { background: var(--bg); padding: 24px; border-radius: 15px; margin-bottom: 24px; }
-        .price-section { text-align: center; margin: 20px 0; padding: 20px; border: 2px solid #eee; border-radius: 15px; position: relative; }
-        .price-tag { font-size: 1.8rem; color: var(--event-red); font-weight: 800; }
-        .old-price { text-decoration: line-through; color: #999; font-size: 1rem; margin-right: 8px; }
-        
-        /* 할인율 뱃지 */
+        .price-box { border: 3px solid var(--accent); padding: 24px; border-radius: 15px; position: relative; background: #fff; text-align: center; }
         .discount-badge { position: absolute; top: -15px; right: -10px; background: var(--event-red); color: white; padding: 5px 12px; border-radius: 20px; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-
-        .benefit-label { background: var(--primary); color: var(--accent); padding: 3px 10px; border-radius: 4px; font-size: 0.85rem; display: inline-block; margin-bottom: 10px; }
+        .price-tag { font-size: 1.8rem; color: var(--event-red); font-weight: 800; }
+        .old-price { text-decoration: line-through; color: #999; font-size: 1.1rem; margin-right: 8px; }
         .deadline-tag { color: var(--event-red); font-weight: bold; font-size: 0.95rem; text-align: center; margin-bottom: 15px; }
-
         .seed-box { background: #fffdf6; border: 1px solid #e0c58e; padding: 24px; border-radius: 15px; text-align: center; margin: 20px 0; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="event-banner">
-        🧧 2026 설 특별 혜택 <span>(~2/13 한정)</span>
-    </div>
+    <div class="event-banner">🧧 설 특별 혜택: 보자기 포장 무료 <span>(~2/13 마감)</span></div>
 
     <section id="step0" class="active">
-        <div class="logo-area">
-            <img src="https://raw.githubusercontent.com/bodyallhani/gen-intake/main/bodyall.png" class="logo-img" alt="바디올한의원">
-        </div>
+        <div class="logo-area"><img src="https://raw.githubusercontent.com/bodyallhani/gen-intake/main/bodyall.png" class="logo-img"></div>
         <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/1_intro.png" class="visual-img">
-        <div class="deadline-tag">※ 설 명절 전 처방 및 배송 마감: 2월 13일(금)</div>
+        <div class="deadline-tag">※ 설 명절 전 배송 마감: 2월 13일(금) 한정</div>
         <h1 class="serif">생명의 씨앗, 정수의 알<br>'씨알'로 깨우는 기력</h1>
-        <p style="text-align:center; color:var(--gray); margin-bottom:30px;">바디올한의원만의 특허받은 조제법으로<br>가장 귀한 진심을 전하세요.</p>
         <button class="btn btn-gold" onclick="startApp('parent')">부모님 건강 판정 시작하기</button>
-        <button class="btn btn-outline" onclick="startApp('self')">나의 활력 지수 판정 시작하기</button>
+        <button class="btn btn-outline" style="width:100%; padding:20px; border:1px solid var(--accent); color:var(--accent); border-radius:12px; background:none; font-weight:bold; cursor:pointer;" onclick="startApp('self')">나의 활력 지수 판정 시작하기</button>
     </section>
 
     <section id="step1">
         <img id="step1-img" src="" class="visual-img">
         <h1 id="step1-title" class="serif" style="line-height: 1.5;"></h1>
-        <div id="step1-desc" class="card" style="text-align: center; line-height: 1.8; border-left: 4px solid var(--accent);"></div>
-        <button class="btn btn-gold" onclick="nextStep(2)">답변 시작하기</button>
+        <div id="step1-desc" class="card" style="text-align: center; border-left: 4px solid var(--accent);"></div>
+        <button class="btn btn-gold" onclick="nextStep(2)">질문 시작하기</button>
     </section>
 
     <section id="step2">
-        <div style="margin-bottom: 30px;">
-            <div id="q-number" style="color:var(--accent); font-weight:bold; font-size:1.2rem; margin-bottom:10px;">Q1.</div>
-            <h2 id="q-text" style="margin-bottom:40px; font-size:1.4rem; line-height:1.4;">질문 데이터 로딩 중...</h2>
-        </div>
-        <button class="btn btn-outline" onclick="handleAns(3)">자주 그렇다</button>
-        <button class="btn btn-outline" onclick="handleAns(2)">가끔 그렇다</button>
-        <button class="btn btn-outline" onclick="handleAns(1)">거의 아니다</button>
+        <div id="q-number" style="color:var(--accent); font-weight:bold; font-size:1.2rem; margin-bottom:10px;">Q1.</div>
+        <h2 id="q-text" style="margin-bottom:40px; font-size:1.4rem;"></h2>
+        <button class="btn btn-outline" style="width:100%; padding:20px; border:1px solid var(--accent); margin-bottom:10px; border-radius:12px; background:white; font-weight:bold; cursor:pointer;" onclick="handleAns(3)">자주 그렇다</button>
+        <button class="btn btn-outline" style="width:100%; padding:20px; border:1px solid var(--accent); margin-bottom:10px; border-radius:12px; background:white; font-weight:bold; cursor:pointer;" onclick="handleAns(2)">가끔 그렇다</button>
+        <button class="btn btn-outline" style="width:100%; padding:20px; border:1px solid var(--accent); border-radius:12px; background:white; font-weight:bold; cursor:pointer;" onclick="handleAns(1)">거의 아니다</button>
     </section>
 
-    <section id="step3">
-        <div style="text-align:center; padding-top:100px;">
-            <div style="font-size:3.5rem; margin-bottom:30px;">🧧</div>
-            <p style="font-size:1.1rem; line-height:1.8;"><strong>임상 데이터와 특허 조제법을 기반으로<br>최적의 처방을 구성 중입니다...</strong></p>
-        </div>
-    </section>
+    <section id="step3"><div style="text-align:center; padding-top:100px;">🧧<br><strong>특허 조제 데이터 분석 중...</strong></div></section>
 
     <section id="step4">
-        <div class="deadline-tag">이벤트 기한: 2026년 2월 13일 금요일 마감</div>
-        <h2 style="text-align:center; color:var(--accent); margin-bottom:5px;">판정 리포트</h2>
-        <h1 id="res-title">S등급: 전신 기력 고갈</h1>
-        <div id="res-desc" class="card" style="line-height:1.8; margin-bottom:10px;"></div>
+        <div class="deadline-tag">이벤트 종료: 2026년 2월 13일 금요일 마감</div>
+        <h2 style="text-align:center; color:var(--accent);">판정 리포트</h2>
+        <h1 id="res-title" style="text-align:center;"></h1>
+        <div id="res-desc" class="card"></div>
+
+        <div class="card" style="background:#fff; border:2px dashed var(--accent);">
+            <h3 style="margin-top:0; text-align:center; color:var(--event-red);">🧧 설 특별 증정 혜택</h3>
+            <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/present.jpg" class="visual-img">
+            <p style="font-size:0.9rem; text-align:center;">지금 처방 시 <b>실크 보자기 & 나비 노리개 포장</b> 무료<br>(2/13 연휴 전 배송 마감 시한 한정)</p>
+        </div>
 
         <div style="margin: 40px 0;">
-            <h3 class="serif" style="text-align:center;">왜 씨알(Seed-Egg)인가?</h3>
-            <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/assure.png" class="data-img" alt="특허증">
-            <p style="font-size:0.85rem; color:var(--gray);"><b>[특허 제10-1744704호]</b> 유효성분 손실을 최소화하여 흡수율을 극대화한 독보적 기술력</p>
-            
-            <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/bro2.png" class="data-img" alt="녹용함량 비교">
-            <p style="font-size:0.85rem; color:var(--gray);">타사 대비 <b>녹용 함량 약 3.6배</b>. 가장 귀한 '분골' 부위만을 고집스럽게 담았습니다</p>
-
-            <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/bro3.png" class="data-img" alt="흡수율 데이터">
-            <p style="font-size:0.85rem; color:var(--gray);">평균 14.09미크론의 <b>초미세 분말</b> 공법으로 신체 이용률을 증명했습니다</p>
+            <h3 class="serif" style="text-align:center;">특허로 증명된 '씨알'의 가치</h3>
+            <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/assure.png" class="data-img">
+            <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/bro1.png" class="data-img">
+            <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/bro2.png" class="data-img">
+            <p style="text-align:center; font-size:0.85rem; color:#666;">타사 대비 <b>녹용 함량 약 4배</b> (6g의 비밀)</p>
+            <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/bro3.png" class="data-img">
         </div>
 
-        <div class="seed-box">
-            <h3 style="margin-top:0; color:var(--primary); font-size:1.1rem;">씨알(Seed-Egg) 조제 원리</h3>
-            <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/3_seed_structure.png" alt="구조도" style="width:120px; margin:10px 0;">
-            <p style="font-size:0.9rem;">사향을 '핵(Seed)'처럼 중심에 응축시켜 향 소실을 막고 기운이 전신에 폭발적으로 퍼지게 합니다.</p>
-        </div>
-
-        <div style="padding:24px; border:3px solid var(--accent); border-radius:15px; background: white; position:relative;">
-            <div id="discount-pct" class="discount-badge">22% OFF</div>
-            <h3 id="prod-name" style="margin-top:0; text-align: center;"></h3>
+        <div class="price-box">
+            <div id="discount-pct" class="discount-badge"></div>
+            <h3 id="prod-name" style="margin-top:0;"></h3>
             <img id="prod-img" src="" class="visual-img">
-            
-            <div class="price-section">
-                <div class="benefit-label">설 특별 혜택가 (30환/3box 기준)</div><br>
+            <div style="margin-bottom:20px;">
+                <span id="prod-old" class="old-price"></span><br>
                 <span id="prod-price" class="price-tag"></span>
             </div>
-            
-            <p id="prod-info" style="font-size:0.95rem; color:var(--gray); text-align: center; margin-bottom:20px;"></p>
-            
-            <button class="btn btn-kakao" onclick="connectKakao()">
-                결과 전송 및 상담 신청
-            </button>
+            <p id="prod-info" style="font-size:0.9rem; color:var(--gray); margin-bottom:20px;"></p>
+            <button class="btn btn-kakao" onclick="connectKakao()">결과 전송 및 상담 신청</button>
         </div>
     </section>
 </div>
@@ -139,25 +104,15 @@
 <script>
     let score = 0, curQ = 0, type = 'parent', resultSummary = "";
     const qs = {
-        parent: ["목소리에 힘이 없고 자주 앉아 조시나요?", "감기나 기침이 2주 이상 가시나요?", "최근 말씀을 자주 반복하시나요?", "계단을 오를 때 숨가빠 하시나요?", "보폭이 예전보다 좁아지셨나요?"],
-        self: ["자고 나도 몸이 무겁고 개운치 않나요?", "오후 3시 이후 집중력이 급격히 떨어지나요?", "업무나 운동 시 '뒷심'이 부족한가요?", "스트레스 상황에서 안색이 칙칙해지나요?", "머리가 멍한 느낌(Brain Fog)이 드나요?"]
+        parent: ["목소리에 힘이 없고 자주 졸고 계신가요?", "기침이나 감기가 2주 이상 가시나요?", "최근 말씀을 자주 반복하시나요?", "계단을 오를 때 숨가빠 하시나요?", "보폭이 예전보다 좁아지셨나요?"],
+        self: ["자고 나도 몸이 천근만근 무거우신가요?", "오후 3시 이후 집중력이 급격히 떨어지나요?", "업무나 운동 시 '뒷심'이 부족한가요?", "스트레스 시 안색이 급격히 칙칙해지나요?", "머리가 멍한 느낌(Brain Fog)이 드나요?"]
     };
 
     function startApp(t) { 
         type = t; 
-        const img = document.getElementById('step1-img');
-        const title = document.getElementById('step1-title');
-        const desc = document.getElementById('step1-desc');
-
-        if(t === 'parent') {
-            img.src = "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/2_hands.png";
-            title.innerHTML = "부모님의 '괜찮다'는 말씀 너머,<br>당신의 <span style='color:var(--accent);'>깊은 시선(深眼)</span>이...";
-            desc.innerText = "자녀분이 발견한 미세한 신호들이 설 특별 혜택과 만나 가장 완벽한 씨알 처방이 됩니다.";
-        } else {
-            img.src = "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/8_self.png";
-            title.innerHTML = "당신의 <span style='color:var(--accent);'>최고 퍼포먼스</span>를 위한<br>가장 압도적인 에너지원";
-            desc.innerText = "단순한 휴식으로 채워지지 않는 깊은 갈증. 특허받은 씨알 조제법이 당신의 엔진을 다시 깨웁니다.";
-        }
+        document.getElementById('step1-img').src = t === 'parent' ? "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/2_hands.png" : "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/8_self.png";
+        document.getElementById('step1-title').innerHTML = t === 'parent' ? "부모님의 '괜찮다'는 말씀 너머,<br>당신의 <span style='color:var(--accent);'>깊은 시선</span>이..." : "당신의 <span style='color:var(--accent);'>최고 퍼포먼스</span>를 위한<br>가장 압도적인 에너지원";
+        document.getElementById('step1-desc').innerText = t === 'parent' ? "자녀의 세심한 관찰이 가장 정확한 진단입니다. 2월 13일까지만 제공되는 혜택과 함께 진심을 전하세요." : "휴식으로 채워지지 않는 깊은 피로. 특허받은 씨알 조제법이 당신의 엔진을 재가동합니다.";
         nextStep(1); 
     }
 
@@ -169,13 +124,8 @@
     }
 
     function updateQ() {
-        if(curQ < 5) {
-            document.getElementById('q-number').innerText = "Q" + (curQ+1);
-            document.getElementById('q-text').innerText = qs[type][curQ];
-        } else {
-            nextStep(3);
-            setTimeout(showResult, 2500);
-        }
+        if(curQ < 5) { document.getElementById('q-text').innerText = qs[type][curQ]; document.getElementById('q-number').innerText = "Q" + (curQ+1); }
+        else { nextStep(3); setTimeout(showResult, 2500); }
     }
 
     function handleAns(p) { score += p; curQ++; updateQ(); }
@@ -183,44 +133,38 @@
     function showResult() {
         nextStep(4);
         const pImg = document.getElementById('prod-img'), pPrice = document.getElementById('prod-price'), 
-              pInfo = document.getElementById('prod-info'), pPct = document.getElementById('discount-pct');
-        let g = "", rec = "";
-
+              pOld = document.getElementById('prod-old'), pPct = document.getElementById('discount-pct'),
+              pName = document.getElementById('prod-name'), pInfo = document.getElementById('prod-info');
+        
         if(score >= 13) {
-            g = "S등급 (기력 고갈)"; rec = "원방 씨알공진단";
+            pName.innerText = "원방 씨알공진단 (30환)";
             pImg.src = "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/4_wonbang_30.png";
-            pPrice.innerHTML = "<span class='old-price'>270만</span> 210만원";
-            pPct.innerText = "22% OFF";
-            pInfo.innerText = "사향 100mg / 녹용 1600mg (4배 함량)";
+            pPrice.innerText = "210만원"; pOld.innerText = "270만원"; pPct.innerText = "22% OFF";
+            pInfo.innerText = "사향 100mg / 녹용 4배 함량";
         } else if(score >= 9) {
-            g = "A등급 (만성 피로)"; rec = "실속 씨알공진단";
+            pName.innerText = "실속 씨알공진단 (30환)";
             pImg.src = "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/5_silsok_30.png";
-            pPrice.innerHTML = "<span class='old-price'>150만</span> 115만원";
-            pPct.innerText = "23% OFF";
-            pInfo.innerText = "사향 40mg 함량의 핵심 집중 처방";
+            pPrice.innerText = "115만원"; pOld.innerText = "150만원"; pPct.innerText = "23% OFF";
+            pInfo.innerText = "사향 40mg 함량 핵심 처방";
         } else if(score >= 7) {
-            g = "B등급 (진액 부족)"; rec = "경옥고";
+            pName.innerText = "전통 경옥고 (3box)";
             pImg.src = "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/6_gyeongokgo.png";
-            pPrice.innerHTML = "<span class='old-price'>36만</span> 28만원";
-            pPct.innerText = "22% OFF";
-            pInfo.innerText = "72시간 전통 옹기 숙성 전문의약품";
+            pPrice.innerText = "28만원"; pOld.innerText = "36만원"; pPct.innerText = "22% OFF";
+            pInfo.innerText = "72시간 옹기 숙성 전문의약품";
         } else {
-            g = "C등급 (인지 활력)"; rec = "총명음";
+            pName.innerText = "총명음 (3box)";
             pImg.src = "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/7_chongmyeong.png";
-            pPrice.innerHTML = "<span class='old-price'>48만</span> 38만원";
-            pPct.innerText = "21% OFF";
-            pInfo.innerText = "인지력 개선 및 두뇌 에너지 보강";
+            pPrice.innerText = "38만원"; pOld.innerText = "48만원"; pPct.innerText = "21% OFF";
+            pInfo.innerText = "인지 활력 및 두뇌 집중력 개선";
         }
-        document.getElementById('res-title').innerText = g + " 판정";
-        document.getElementById('res-desc').innerText = type === 'parent' ? "부모님의 건강을 위해 '씨알'의 생명력을 선물하세요." : "당신의 최상의 컨디션을 위해 검증된 처방을 권장합니다.";
-        document.getElementById('prod-name').innerText = "추천 처방: " + rec;
-        resultSummary = `[설 판정 결과] 대상: ${type}, 등급: ${g}, 추천: ${rec}, 점수: ${score}점`;
+        document.getElementById('res-title').innerText = "판정 결과: " + (score >= 13 ? "S등급" : score >= 9 ? "A등급" : score >= 7 ? "B등급" : "C등급");
+        resultSummary = `[설 판정 결과] 대상: ${type}, 점수: ${score}점, 추천: ${pName.innerText}`;
     }
 
     function connectKakao() {
-        const t = document.createElement("textarea"); t.value = resultSummary + "\n위 결과로 상담 신청합니다."; 
+        const t = document.createElement("textarea"); t.value = resultSummary + "\n위 결과로 설 이벤트 상담 신청합니다."; 
         document.body.appendChild(t); t.select(); document.execCommand('copy'); document.body.removeChild(t);
-        alert("판정 결과가 복사되었습니다! 상담창에 붙여넣어 주세요.");
+        alert("결과가 복사되었습니다! 상담창에 붙여넣어 주세요.");
         window.open("https://pf.kakao.com/_wdtXK/chat", '_blank');
     }
 </script>
