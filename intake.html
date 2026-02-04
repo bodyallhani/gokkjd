@@ -37,7 +37,7 @@
 
     <section id="step0" class="active">
         <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/1_intro.png" class="visual-img">
-        <h1 class="serif" style="text-align:center;">생명력의 응축, 씨알 공진단<br>2026 설 건강 판정 시스템</h1>
+        <h1 class="serif" style="text-align:center;">생명력의 응축, 면역의 核<br>2026 설 효도선물 이벤트</h1>
         <button class="btn btn-gold" onclick="startApp('parent')" style="margin-bottom:15px;">부모님 건강 판정 (선물용)</button>
         <button class="btn btn-outline" style="width:100%; padding:20px; border:1px solid var(--accent); color:var(--accent); border-radius:12px; background:none; font-weight:bold; cursor:pointer;" onclick="startApp('self')">나의 활력 지수 판정 (본인용)</button>
     </section>
@@ -57,7 +57,7 @@
         <button class="btn btn-outline" style="width:100%; padding:20px; border:1px solid var(--accent); border-radius:12px; background:white; font-weight:bold; cursor:pointer;" onclick="handleAns(1)">거의 아니다</button>
     </section>
 
-    <section id="step3"><div style="text-align:center; padding-top:100px;">🧧<br><strong>정수(精髓) 분석 및 처방 매칭 중...</strong></div></section>
+    <section id="step3"><div style="text-align:center; padding-top:100px;">🧧<br><strong>처방 매칭 중...</strong></div></section>
 
     <section id="step4">
         <h2 style="text-align:center; color:var(--accent);">판정 리포트</h2>
@@ -100,7 +100,7 @@
     function startApp(t) { 
         type = t; 
         document.getElementById('step1-img').src = t === 'parent' ? "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/2_hands.png" : "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/8_self.png";
-        document.getElementById('step1-title').innerHTML = t === 'parent' ? "부모님의 '괜찮다'는 말씀 너머,<br>당신의 <span style='color:var(--accent);'>깊은 시선(深眼)</span>이..." : "당신의 <span style='color:var(--accent);'>최고 퍼포먼스</span>를 위한<br>압도적 에너지원";
+        document.getElementById('step1-title').innerHTML = t === 'parent' ? "부모님의 '괜찮다'는 말씀 너머에,<br>당신의<span style='color:var(--accent);'>진심</span>을 전합니다" : "당신의 <span style='color:var(--accent);'>최고 퍼포먼스</span>를 위한<br>압도적 에너지원";
         document.getElementById('step1-desc').innerText = "2월 13일 마감 전 정수가 담긴 처방 리포트를 확인하세요.";
         nextStep(1); 
     }
