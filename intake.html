@@ -3,100 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026 설 건강 판정 시스템 | 바디올한의원 씨알공진단</title>
+    <title>2026 설 건강 판정 시스템 | 바디올한의원</title>
     <link rel="icon" href="https://raw.githubusercontent.com/bodyallhani/gen-intake/main/bodyall.png" type="image/png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap');
-        :root {
-            --primary: #1b3a32; --accent: #c5a059; --bg: #f9f7f2;
-            --white: #ffffff; --gray: #666666; --event-red: #d32f2f;
-        }
+        :root { --primary: #1b3a32; --accent: #c5a059; --bg: #f9f7f2; --white: #ffffff; --event-red: #d32f2f; }
         body { margin: 0; font-family: 'Pretendard', sans-serif; background: var(--bg); color: var(--primary); line-height: 1.6; word-break: keep-all; }
-        .container { max-width: 480px; margin: 0 auto; min-height: 100vh; background: var(--white); box-shadow: 0 0 20px rgba(0,0,0,0.05); position: relative; }
-        .event-banner { background: var(--primary); color: var(--accent); text-align: center; padding: 12px; font-weight: bold; font-size: 0.9rem; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--accent); }
+        .container { max-width: 480px; margin: 0 auto; background: var(--white); box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+        .event-banner { background: var(--primary); color: var(--accent); text-align: center; padding: 12px; font-weight: bold; position: sticky; top: 0; z-index: 100; font-size: 0.9rem; }
         section { display: none; padding: 40px 24px; animation: fadeIn 0.6s ease; }
         section.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .logo-area { text-align: center; margin-bottom: 30px; }
-        .logo-img { width: 140px; }
-        h1 { font-size: 1.6rem; text-align: center; margin-bottom: 20px; font-weight: 800; }
-        .serif { font-family: 'Noto Serif KR', serif; }
-        .visual-img { width: 100%; border-radius: 15px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .visual-img { width: 100%; border-radius: 15px; margin-bottom: 24px; }
         .data-img { width: 100%; border-radius: 10px; margin: 15px 0; border: 1px solid #eee; }
-        .btn { display: block; width: 100%; padding: 22px; border-radius: 12px; border: none; font-size: 1.15rem; font-weight: 700; cursor: pointer; transition: 0.3s; margin-bottom: 12px; text-decoration: none; text-align: center; box-sizing: border-box;}
+        .btn { display: block; width: 100%; padding: 22px; border-radius: 12px; border: none; font-size: 1.15rem; font-weight: 700; cursor: pointer; text-decoration: none; text-align: center; box-sizing: border-box; }
         .btn-gold { background: var(--accent); color: var(--white); }
-        .btn-kakao { background: #fee500; color: #3c1e1e; font-size: 1.2rem; }
+        .btn-kakao { background: #fee500; color: #3c1e1e; }
         .card { background: var(--bg); padding: 24px; border-radius: 15px; margin-bottom: 24px; }
-        .price-box { border: 3px solid var(--accent); padding: 24px; border-radius: 15px; position: relative; background: #fff; text-align: center; }
-        .discount-badge { position: absolute; top: -15px; right: -10px; background: var(--event-red); color: white; padding: 5px 12px; border-radius: 20px; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .price-box { border: 2px solid var(--accent); padding: 24px; border-radius: 15px; position: relative; background: #fff; text-align: center; }
+        .discount-badge { position: absolute; top: -15px; right: -10px; background: var(--event-red); color: white; padding: 6px 14px; border-radius: 20px; font-weight: bold; }
         .price-tag { font-size: 1.8rem; color: var(--event-red); font-weight: 800; }
-        .old-price { text-decoration: line-through; color: #999; font-size: 1.1rem; margin-right: 8px; }
-        .deadline-tag { color: var(--event-red); font-weight: bold; font-size: 0.95rem; text-align: center; margin-bottom: 15px; }
-        .seed-box { background: #fffdf6; border: 1px solid #e0c58e; padding: 24px; border-radius: 15px; text-align: center; margin: 20px 0; }
+        .old-price { text-decoration: line-through; color: #999; font-size: 1.1rem; }
+        .budget-alt { margin-top: 20px; font-size: 0.9rem; color: #666; text-decoration: underline; cursor: pointer; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="event-banner">🧧 설 특별 혜택: 보자기 포장 무료 <span>(~2/13 마감)</span></div>
+    <div class="event-banner">🧧 설 특별 혜택: 보자기 포장 무료 (~2/13 마감)</div>
 
     <section id="step0" class="active">
-        <div class="logo-area"><img src="https://raw.githubusercontent.com/bodyallhani/gen-intake/main/bodyall.png" class="logo-img"></div>
+        <div style="text-align: center; margin-bottom: 20px;"><img src="https://raw.githubusercontent.com/bodyallhani/gen-intake/main/bodyall.png" style="width: 140px;"></div>
         <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/1_intro.png" class="visual-img">
-        <div class="deadline-tag">※ 설 명절 전 배송 마감: 2월 13일(금) 한정</div>
-        <h1 class="serif">생명의 씨앗, 정수의 알<br>'씨알'로 깨우는 기력</h1>
-        <button class="btn btn-gold" onclick="startApp('parent')">부모님 건강 판정 시작하기</button>
-        <button class="btn btn-outline" style="width:100%; padding:20px; border:1px solid var(--accent); color:var(--accent); border-radius:12px; background:none; font-weight:bold; cursor:pointer;" onclick="startApp('self')">나의 활력 지수 판정 시작하기</button>
+        <h1 class="serif" style="text-align:center;">씨알(Seed-Egg)로 깨우는<br>2026 설 건강 판정</h1>
+        <button class="btn btn-gold" onclick="startApp('parent')" style="margin-bottom:15px;">부모님 건강 판정 (선물용)</button>
+        <button class="btn btn-outline" style="width:100%; padding:20px; border:1px solid var(--accent); color:var(--accent); border-radius:12px; background:none; font-weight:bold; cursor:pointer;" onclick="startApp('self')">나의 활력 지수 판정 (본인용)</button>
     </section>
 
     <section id="step1">
         <img id="step1-img" src="" class="visual-img">
-        <h1 id="step1-title" class="serif" style="line-height: 1.5;"></h1>
-        <div id="step1-desc" class="card" style="text-align: center; border-left: 4px solid var(--accent);"></div>
+        <h1 id="step1-title" class="serif" style="text-align:center;"></h1>
+        <div id="step1-desc" class="card" style="text-align:center;"></div>
         <button class="btn btn-gold" onclick="nextStep(2)">질문 시작하기</button>
     </section>
 
     <section id="step2">
-        <div id="q-number" style="color:var(--accent); font-weight:bold; font-size:1.2rem; margin-bottom:10px;">Q1.</div>
+        <div id="q-number" style="color:var(--accent); font-weight:bold;">Q1.</div>
         <h2 id="q-text" style="margin-bottom:40px; font-size:1.4rem;"></h2>
         <button class="btn btn-outline" style="width:100%; padding:20px; border:1px solid var(--accent); margin-bottom:10px; border-radius:12px; background:white; font-weight:bold; cursor:pointer;" onclick="handleAns(3)">자주 그렇다</button>
         <button class="btn btn-outline" style="width:100%; padding:20px; border:1px solid var(--accent); margin-bottom:10px; border-radius:12px; background:white; font-weight:bold; cursor:pointer;" onclick="handleAns(2)">가끔 그렇다</button>
         <button class="btn btn-outline" style="width:100%; padding:20px; border:1px solid var(--accent); border-radius:12px; background:white; font-weight:bold; cursor:pointer;" onclick="handleAns(1)">거의 아니다</button>
     </section>
 
-    <section id="step3"><div style="text-align:center; padding-top:100px;">🧧<br><strong>특허 조제 데이터 분석 중...</strong></div></section>
+    <section id="step3"><div style="text-align:center; padding-top:100px;">🧧<br><strong>정밀 분석 중...</strong></div></section>
 
     <section id="step4">
-        <div class="deadline-tag">이벤트 종료: 2026년 2월 13일 금요일 마감</div>
         <h2 style="text-align:center; color:var(--accent);">판정 리포트</h2>
         <h1 id="res-title" style="text-align:center;"></h1>
         <div id="res-desc" class="card"></div>
 
-        <div class="card" style="background:#fff; border:2px dashed var(--accent);">
-            <h3 style="margin-top:0; text-align:center; color:var(--event-red);">🧧 설 특별 증정 혜택</h3>
-            <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/present.jpg" class="visual-img">
-            <p style="font-size:0.9rem; text-align:center;">지금 처방 시 <b>실크 보자기 & 나비 노리개 포장</b> 무료<br>(2/13 연휴 전 배송 마감 시한 한정)</p>
-        </div>
+        <div id="proof-section" style="margin: 40px 0;"></div>
 
-        <div style="margin: 40px 0;">
-            <h3 class="serif" style="text-align:center;">특허로 증명된 '씨알'의 가치</h3>
-            <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/assure.png" class="data-img">
-            <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/bro1.png" class="data-img">
-            <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/bro2.png" class="data-img">
-            <p style="text-align:center; font-size:0.85rem; color:#666;">타사 대비 <b>녹용 함량 약 4배</b> (6g의 비밀)</p>
-            <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/bro3.png" class="data-img">
+        <div class="card" style="background:#fff; border:2px dashed var(--accent);">
+            <h3 style="margin-top:0; text-align:center; color:var(--event-red);">🧧 설 이벤트 전용 혜택</h3>
+            <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/present.png" class="visual-img" style="margin-bottom:10px;">
+            <p style="font-size:0.9rem; text-align:center; margin-bottom:0;">
+                지금 주문 시 <strong>실크 보자기 & 나비 노리개 포장</strong> 무료<br>
+                (2/13 연휴 전 배송 마감 시한 한정)
+            </p>
         </div>
 
         <div class="price-box">
             <div id="discount-pct" class="discount-badge"></div>
             <h3 id="prod-name" style="margin-top:0;"></h3>
             <img id="prod-img" src="" class="visual-img">
-            <div style="margin-bottom:20px;">
+            <div style="text-align:center; margin-bottom:20px;">
                 <span id="prod-old" class="old-price"></span><br>
                 <span id="prod-price" class="price-tag"></span>
             </div>
-            <p id="prod-info" style="font-size:0.9rem; color:var(--gray); margin-bottom:20px;"></p>
             <button class="btn btn-kakao" onclick="connectKakao()">결과 전송 및 상담 신청</button>
+            <div class="budget-alt" onclick="showBudgetAlt()">예산에 맞춰 처방 수량을 조정하고 싶으신가요?</div>
         </div>
     </section>
 </div>
@@ -111,8 +97,8 @@
     function startApp(t) { 
         type = t; 
         document.getElementById('step1-img').src = t === 'parent' ? "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/2_hands.png" : "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/8_self.png";
-        document.getElementById('step1-title').innerHTML = t === 'parent' ? "부모님의 '괜찮다'는 말씀 너머,<br>당신의 <span style='color:var(--accent);'>깊은 시선</span>이..." : "당신의 <span style='color:var(--accent);'>최고 퍼포먼스</span>를 위한<br>가장 압도적인 에너지원";
-        document.getElementById('step1-desc').innerText = t === 'parent' ? "자녀의 세심한 관찰이 가장 정확한 진단입니다. 2월 13일까지만 제공되는 혜택과 함께 진심을 전하세요." : "휴식으로 채워지지 않는 깊은 피로. 특허받은 씨알 조제법이 당신의 엔진을 재가동합니다.";
+        document.getElementById('step1-title').innerHTML = t === 'parent' ? "부모님의 '괜찮다'는 말씀 너머,<br>당신의 <span style='color:var(--accent);'>깊은 시선</span>이..." : "당신의 <span style='color:var(--accent);'>최상의 퍼포먼스</span>를 위한<br>압도적 에너지원";
+        document.getElementById('step1-desc').innerText = "2월 13일 마감 전 특별 혜택과 함께 '씨알' 처방 리포트를 확인하세요.";
         nextStep(1); 
     }
 
@@ -125,7 +111,7 @@
 
     function updateQ() {
         if(curQ < 5) { document.getElementById('q-text').innerText = qs[type][curQ]; document.getElementById('q-number').innerText = "Q" + (curQ+1); }
-        else { nextStep(3); setTimeout(showResult, 2500); }
+        else { nextStep(3); setTimeout(showResult, 2000); }
     }
 
     function handleAns(p) { score += p; curQ++; updateQ(); }
@@ -134,37 +120,47 @@
         nextStep(4);
         const pImg = document.getElementById('prod-img'), pPrice = document.getElementById('prod-price'), 
               pOld = document.getElementById('prod-old'), pPct = document.getElementById('discount-pct'),
-              pName = document.getElementById('prod-name'), pInfo = document.getElementById('prod-info');
+              pName = document.getElementById('prod-name'), proof = document.getElementById('proof-section');
         
-        if(score >= 13) {
-            pName.innerText = "원방 씨알공진단 (30환)";
-            pImg.src = "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/4_wonbang_30.png";
-            pPrice.innerText = "210만원"; pOld.innerText = "270만원"; pPct.innerText = "22% OFF";
-            pInfo.innerText = "사향 100mg / 녹용 4배 함량";
-        } else if(score >= 9) {
-            pName.innerText = "실속 씨알공진단 (30환)";
-            pImg.src = "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/5_silsok_30.png";
-            pPrice.innerText = "115만원"; pOld.innerText = "150만원"; pPct.innerText = "23% OFF";
-            pInfo.innerText = "사향 40mg 함량 핵심 처방";
-        } else if(score >= 7) {
-            pName.innerText = "전통 경옥고 (3box)";
-            pImg.src = "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/6_gyeongokgo.png";
-            pPrice.innerText = "28만원"; pOld.innerText = "36만원"; pPct.innerText = "22% OFF";
-            pInfo.innerText = "72시간 옹기 숙성 전문의약품";
-        } else {
-            pName.innerText = "총명음 (3box)";
-            pImg.src = "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/7_chongmyeong.png";
-            pPrice.innerText = "38만원"; pOld.innerText = "48만원"; pPct.innerText = "21% OFF";
-            pInfo.innerText = "인지 활력 및 두뇌 집중력 개선";
+        let content = "";
+        if(score >= 9) { // 공진단 라인 (S, A등급)
+            const isWonbang = score >= 13;
+            pName.innerText = isWonbang ? "원방 씨알공진단 (30환)" : "실속 씨알공진단 (30환)";
+            pImg.src = isWonbang ? "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/4_wonbang_30.png" : "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/5_silsok_30.png";
+            pPrice.innerText = isWonbang ? "210만원" : "115만원";
+            pOld.innerText = isWonbang ? "270만원" : "150만원";
+            pPct.innerText = isWonbang ? "22% OFF" : "23% OFF";
+            
+            content = `<h3 class="serif" style="text-align:center;">검증된 씨알(Seed-Egg)의 힘</h3>
+                       <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/assure.png" class="data-img">
+                       <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/bro1.png" class="data-img">
+                       <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/bro2.png" class="data-img">
+                       <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/bro3.png" class="data-img">`;
+        } else { // 경옥고/총명음 라인 (B, C등급)
+            const isGyeong = score >= 7;
+            pName.innerText = isGyeong ? "전통 경옥고 (3box)" : "총명음 (3box)";
+            pImg.src = isGyeong ? "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/6_gyeongokgo.png" : "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/7_chongmyeong.png";
+            pPrice.innerText = isGyeong ? "28만원" : "38만원";
+            pOld.innerText = isGyeong ? "36만원" : "48만원";
+            pPct.innerText = isGyeong ? "22% OFF" : "21% OFF";
+            
+            content = `<h3 class="serif" style="text-align:center;">전문 한의약품의 정통성</h3>
+                       <div class="card">이 처방은 마트용 식품이 아닌 한의사가 직접 조제하는 <b>전문 의약품</b>입니다. 엄격한 품질 관리를 통과한 정식 약재만을 사용합니다.</div>`;
         }
-        document.getElementById('res-title').innerText = "판정 결과: " + (score >= 13 ? "S등급" : score >= 9 ? "A등급" : score >= 7 ? "B등급" : "C등급");
-        resultSummary = `[설 판정 결과] 대상: ${type}, 점수: ${score}점, 추천: ${pName.innerText}`;
+        proof.innerHTML = content;
+        document.getElementById('res-title').innerText = (score >= 13 ? "S등급" : score >= 9 ? "A등급" : score >= 7 ? "B등급" : "C등급") + " 판정";
+        resultSummary = `[설 판정 결과] 대상: ${type}, 등급: ${score}, 추천: ${pName.innerText}`;
+    }
+
+    function showBudgetAlt() {
+        alert("원방/실속형 10환 세트나 단품 구성을 통해 예산에 맞는 최적의 처방이 가능합니다. 상담창에서 '예산 맞춤'을 문의해 주세요.");
+        connectKakao();
     }
 
     function connectKakao() {
-        const t = document.createElement("textarea"); t.value = resultSummary + "\n위 결과로 설 이벤트 상담 신청합니다."; 
+        const t = document.createElement("textarea"); t.value = resultSummary + "\n예산 및 수량 조절 상담 신청합니다."; 
         document.body.appendChild(t); t.select(); document.execCommand('copy'); document.body.removeChild(t);
-        alert("결과가 복사되었습니다! 상담창에 붙여넣어 주세요.");
+        alert("결과 복사 완료! 상담창에 붙여넣어 주세요.");
         window.open("https://pf.kakao.com/_wdtXK/chat", '_blank');
     }
 </script>
