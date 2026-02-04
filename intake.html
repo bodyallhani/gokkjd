@@ -37,7 +37,7 @@
 
     <section id="step0" class="active">
         <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/1_intro.png" class="visual-img">
-        <h1 class="serif" style="text-align:center;">정수의 보존, 씨알(Sial)<br>2026 설 건강 판정 시스템</h1>
+        <h1 class="serif" style="text-align:center;">생명력의 응축, 씨알 공진단<br>2026 설 건강 판정 시스템</h1>
         <button class="btn btn-gold" onclick="startApp('parent')" style="margin-bottom:15px;">부모님 건강 판정 (선물용)</button>
         <button class="btn btn-outline" style="width:100%; padding:20px; border:1px solid var(--accent); color:var(--accent); border-radius:12px; background:none; font-weight:bold; cursor:pointer;" onclick="startApp('self')">나의 활력 지수 판정 (본인용)</button>
     </section>
@@ -57,7 +57,7 @@
         <button class="btn btn-outline" style="width:100%; padding:20px; border:1px solid var(--accent); border-radius:12px; background:white; font-weight:bold; cursor:pointer;" onclick="handleAns(1)">거의 아니다</button>
     </section>
 
-    <section id="step3"><div style="text-align:center; padding-top:100px;">🧧<br><strong>정밀 분석 중...</strong></div></section>
+    <section id="step3"><div style="text-align:center; padding-top:100px;">🧧<br><strong>정수(精髓) 분석 및 처방 매칭 중...</strong></div></section>
 
     <section id="step4">
         <h2 style="text-align:center; color:var(--accent);">판정 리포트</h2>
@@ -127,19 +127,19 @@
               proof = document.getElementById('proof-section'), rDesc = document.getElementById('res-desc');
         
         let content = "";
-        if(score >= 9) { // 공진단 (S, A등급)
+        if(score >= 9) { // 공진단 라인
             const isWonbang = score >= 13;
-            pName.innerText = isWonbang ? "원방 씨알공진단 (30환)" : "실속 씨알공진단 (30환)";
+            pName.innerText = isWonbang ? "원방 씨알 공진단 (30환)" : "실속 씨알 공진단 (30환)";
             pImg.src = isWonbang ? "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/4_wonbang_30.png" : "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/5_silsok_30.png";
             pPrice.innerText = isWonbang ? "210만원" : "115만원"; pOld.innerText = isWonbang ? "270만원" : "150만원"; pPct.innerText = isWonbang ? "22% OFF" : "23% OFF";
             pInfo.innerText = isWonbang ? "사향 100mg / 녹용 4배 함량" : "사향 40mg 함량 핵심 처방";
             rDesc.innerHTML = type === 'parent' ? "부모님의 고갈된 기력을 즉각적으로 채워줄<br>가장 품격 있는 처방이 시급합니다." : "당신의 무너진 생체 엔진을 다시 가동할<br>고농축 에너지원이 필요합니다.";
             
-            content = `<h3 class="serif" style="text-align:center;">숙련된 장인의 정수가 담긴 조제 과정</h3>
+            content = `<h3 class="serif" style="text-align:center;">정수의 보존 : 심(芯) 조제 공법</h3>
                        <div class="video-container">
                            <iframe src="https://drive.google.com/file/d/1OJN_sDivIR4at0TcisGUECRQQTlcqCu8/preview" allow="autoplay"></iframe>
                        </div>
-                       <p style="font-size:0.95rem; text-align:center; margin-bottom:20px;">바디올의 씨알공진단은 사향을 핵(Nucleus)처럼 중심에 응축시켜 유효 성분의 소실을 막고 흡수율을 극대화한 독보적 기술력입니다.</p>
+                       <p style="font-size:0.95rem; text-align:center; margin-bottom:20px;">귀한 사향을 환의 중심에 심지처럼 응축시키는 <b>심(芯) 공법</b>으로 사향의 휘발을 막고 신체 이용률을 최고조로 끌어올린 바디올만의 정수입니다.</p>
                        <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/assure.png" class="data-img">
                        <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/bro2.png" class="data-img">
                        <p style="text-align:center; font-size:0.85rem; color:#666;">타사 대비 <b>녹용 함량 약 4배</b> (6g의 비밀)</p>`;
@@ -165,7 +165,7 @@
     }
 
     function showBudgetAlt() {
-        alert("원방/실속형 10환 세트나 단품 구성을 통해 예산에 맞는 최적의 대안이 가능합니다. 상담창에서 '예산 맞춤'을 문의해 주세요.");
+        alert("상담 시 '예산 맞춤 처방'을 요청하시면 수량 조절을 통해 최적의 대안을 안내해 드립니다.");
         connectKakao();
     }
 
