@@ -17,12 +17,14 @@
         h1 { font-size: 1.6rem; text-align: center; margin-bottom: 20px; font-weight: 800; }
         .serif { font-family: 'Noto Serif KR', serif; }
         .visual-img { width: 100%; border-radius: 15px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .video-container { width: 100%; border-radius: 15px; overflow: hidden; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background: #000; position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
         .data-img { width: 100%; border-radius: 10px; margin: 15px 0; border: 1px solid #eee; }
         .btn { display: block; width: 100%; padding: 22px; border-radius: 12px; border: none; font-size: 1.15rem; font-weight: 700; cursor: pointer; text-decoration: none; text-align: center; box-sizing: border-box; }
         .btn-gold { background: var(--accent); color: var(--white); }
         .card { background: var(--bg); padding: 24px; border-radius: 15px; margin-bottom: 24px; }
         .price-box { border: 2px solid var(--accent); padding: 24px; border-radius: 15px; position: relative; background: #fff; text-align: center; }
-        .discount-badge { position: absolute; top: -15px; right: -10px; background: var(--event-red); color: white; padding: 6px 14px; border-radius: 20px; font-weight: bold; }
+        .discount-badge { position: absolute; top: -15px; right: -10px; background: var(--event-red); color: white; padding: 6px 14px; border-radius: 20px; font-weight: bold; font-size: 1rem; }
         .price-tag { font-size: 1.8rem; color: var(--event-red); font-weight: 800; }
         .old-price { text-decoration: line-through; color: #999; font-size: 1.1rem; }
         .budget-alt { margin-top: 20px; font-size: 0.9rem; color: #666; text-decoration: underline; cursor: pointer; }
@@ -97,19 +99,9 @@
 
     function startApp(t) { 
         type = t; 
-        const img = document.getElementById('step1-img');
-        const title = document.getElementById('step1-title');
-        const desc = document.getElementById('step1-desc');
-
-        if(t === 'parent') {
-            img.src = "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/2_hands.png";
-            title.innerHTML = "부모님의 '괜찮다'는 말씀 너머,<br>당신의 <span style='color:var(--accent);'>깊은 시선(深眼)</span>이...";
-            desc.innerHTML = "부모님은 자식 걱정에 언제나 '괜찮다'고 하십니다.<br>하지만 자녀분이 발견한 미세한 신호들이<br>건강한 활력을 약속하는 가장 정밀한 진단서가 됩니다.";
-        } else {
-            img.src = "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/8_self.png";
-            title.innerHTML = "성공을 향한 질주 뒤에 가려진,<br>당신의 <span style='color:var(--accent);'>고요한 신호</span>에 귀 기울이세요.";
-            desc.innerHTML = "단순한 휴식이 필요한 것이 아니라, 다시 일어설 '정수'가 필요한 시점입니다.<br>최상의 퍼포먼스를 위해, 당신의 내면에<br>가장 귀한 생명력을 채워 넣을 시간입니다.";
-        }
+        document.getElementById('step1-img').src = t === 'parent' ? "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/2_hands.png" : "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/8_self.png";
+        document.getElementById('step1-title').innerHTML = t === 'parent' ? "부모님의 '괜찮다'는 말씀 너머,<br>당신의 <span style='color:var(--accent);'>깊은 시선(深眼)</span>이..." : "당신의 <span style='color:var(--accent);'>최고 퍼포먼스</span>를 위한<br>압도적 에너지원";
+        document.getElementById('step1-desc').innerText = "2월 13일 마감 전 정수가 담긴 처방 리포트를 확인하세요.";
         nextStep(1); 
     }
 
@@ -135,7 +127,7 @@
               proof = document.getElementById('proof-section'), rDesc = document.getElementById('res-desc');
         
         let content = "";
-        if(score >= 9) { // 공진단
+        if(score >= 9) { // 공진단 (S, A등급)
             const isWonbang = score >= 13;
             pName.innerText = isWonbang ? "원방 씨알공진단 (30환)" : "실속 씨알공진단 (30환)";
             pImg.src = isWonbang ? "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/4_wonbang_30.png" : "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/5_silsok_30.png";
@@ -143,12 +135,15 @@
             pInfo.innerText = isWonbang ? "사향 100mg / 녹용 4배 함량" : "사향 40mg 함량 핵심 처방";
             rDesc.innerHTML = type === 'parent' ? "부모님의 고갈된 기력을 즉각적으로 채워줄<br>가장 품격 있는 처방이 시급합니다." : "당신의 무너진 생체 엔진을 다시 가동할<br>고농축 에너지원이 필요합니다.";
             
-            content = `<h3 class="serif" style="text-align:center;">특허로 증명된 정수의 보존</h3>
-                       <p style="font-size:0.95rem; text-align:center; margin-bottom:20px;">사향을 핵(Nucleus)처럼 중심에 응축시켜 유효 성분의 소실을 막고 흡수율을 극대화한 독보적 기술력입니다.</p>
+            content = `<h3 class="serif" style="text-align:center;">숙련된 장인의 정수가 담긴 조제 과정</h3>
+                       <div class="video-container">
+                           <iframe src="https://drive.google.com/file/d/1OJN_sDivIR4at0TcisGUECRQQTlcqCu8/preview" allow="autoplay"></iframe>
+                       </div>
+                       <p style="font-size:0.95rem; text-align:center; margin-bottom:20px;">바디올의 씨알공진단은 사향을 핵(Nucleus)처럼 중심에 응축시켜 유효 성분의 소실을 막고 흡수율을 극대화한 독보적 기술력입니다.</p>
                        <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/assure.png" class="data-img">
                        <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/bro2.png" class="data-img">
                        <p style="text-align:center; font-size:0.85rem; color:#666;">타사 대비 <b>녹용 함량 약 4배</b> (6g의 비밀)</p>`;
-        } else { // 경옥고/총명음
+        } else { // 경옥고/총명음 라인
             const isGyeong = score >= 7;
             pName.innerText = isGyeong ? "전통 경옥고 (3box)" : "총명음 (3box)";
             pImg.src = isGyeong ? "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/6_gyeongokgo.png" : "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/7_chongmyeong.png";
