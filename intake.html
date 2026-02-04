@@ -14,18 +14,15 @@
         section { display: none; padding: 40px 24px; animation: fadeIn 0.6s ease; }
         section.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .logo-area { text-align: center; margin-bottom: 30px; }
-        .logo-img { width: 140px; }
         h1 { font-size: 1.6rem; text-align: center; margin-bottom: 20px; font-weight: 800; }
         .serif { font-family: 'Noto Serif KR', serif; }
         .visual-img { width: 100%; border-radius: 15px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .data-img { width: 100%; border-radius: 10px; margin: 15px 0; border: 1px solid #eee; }
         .btn { display: block; width: 100%; padding: 22px; border-radius: 12px; border: none; font-size: 1.15rem; font-weight: 700; cursor: pointer; text-decoration: none; text-align: center; box-sizing: border-box; }
         .btn-gold { background: var(--accent); color: var(--white); }
-        .btn-kakao { background: #fee500; color: #3c1e1e; }
         .card { background: var(--bg); padding: 24px; border-radius: 15px; margin-bottom: 24px; }
         .price-box { border: 2px solid var(--accent); padding: 24px; border-radius: 15px; position: relative; background: #fff; text-align: center; }
-        .discount-badge { position: absolute; top: -15px; right: -10px; background: var(--event-red); color: white; padding: 6px 14px; border-radius: 20px; font-weight: bold; font-size: 1rem; }
+        .discount-badge { position: absolute; top: -15px; right: -10px; background: var(--event-red); color: white; padding: 6px 14px; border-radius: 20px; font-weight: bold; }
         .price-tag { font-size: 1.8rem; color: var(--event-red); font-weight: 800; }
         .old-price { text-decoration: line-through; color: #999; font-size: 1.1rem; }
         .budget-alt { margin-top: 20px; font-size: 0.9rem; color: #666; text-decoration: underline; cursor: pointer; }
@@ -37,9 +34,8 @@
     <div class="event-banner">🧧 설 특별 혜택: 보자기 포장 무료 (~2/13 마감)</div>
 
     <section id="step0" class="active">
-        <div class="logo-area"><img src="https://raw.githubusercontent.com/bodyallhani/gen-intake/main/bodyall.png" class="logo-img"></div>
         <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/1_intro.png" class="visual-img">
-        <h1 class="serif" style="text-align:center;">생명의 씨앗, 정수의 응축<br>2026 설 건강 판정 시스템</h1>
+        <h1 class="serif" style="text-align:center;">정수의 보존, 씨알(Sial)<br>2026 설 건강 판정 시스템</h1>
         <button class="btn btn-gold" onclick="startApp('parent')" style="margin-bottom:15px;">부모님 건강 판정 (선물용)</button>
         <button class="btn btn-outline" style="width:100%; padding:20px; border:1px solid var(--accent); color:var(--accent); border-radius:12px; background:none; font-weight:bold; cursor:pointer;" onclick="startApp('self')">나의 활력 지수 판정 (본인용)</button>
     </section>
@@ -86,8 +82,8 @@
                 <span id="prod-price" class="price-tag"></span>
             </div>
             <p id="prod-info" style="font-size:0.9rem; color:var(--gray); margin-bottom:20px;"></p>
-            <button class="btn btn-kakao" onclick="connectKakao()">결과 전송 및 상담 신청</button>
-            <div class="budget-alt" onclick="showBudgetAlt()">예산에 맞춰 처방 구성을 조정하고 싶으신가요?</div>
+            <button class="btn btn-outline" style="width:100%; padding:22px; border:none; background:#fee500; color:#3c1e1e; font-size:1.2rem; font-weight:bold; border-radius:12px; cursor:pointer;" onclick="connectKakao()">결과 전송 및 상담 신청</button>
+            <div class="budget-alt" onclick="showBudgetAlt()">예산에 맞춰 처방 수량을 조정하고 싶으신가요?</div>
         </div>
     </section>
 </div>
@@ -108,11 +104,11 @@
         if(t === 'parent') {
             img.src = "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/2_hands.png";
             title.innerHTML = "부모님의 '괜찮다'는 말씀 너머,<br>당신의 <span style='color:var(--accent);'>깊은 시선(深眼)</span>이...";
-            desc.innerHTML = "부모님은 자식 걱정에 언제나 '괜찮다'고 하십니다.<br>하지만 자녀분이 발견한 미세한 신호들이<br>부모님의 활기찬 10년을 약속하는 가장 정밀한 진단서가 됩니다.";
+            desc.innerHTML = "부모님은 자식 걱정에 언제나 '괜찮다'고 하십니다.<br>하지만 자녀분이 발견한 미세한 신호들이<br>건강한 활력을 약속하는 가장 정밀한 진단서가 됩니다.";
         } else {
             img.src = "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/8_self.png";
             title.innerHTML = "성공을 향한 질주 뒤에 가려진,<br>당신의 <span style='color:var(--accent);'>고요한 신호</span>에 귀 기울이세요.";
-            desc.innerHTML = "쉼표가 필요한 것이 아니라, 다시 일어설 '정수'가 필요한 시점입니다.<br>최상의 퍼포먼스를 위해, 당신의 내면에<br>가장 귀한 생명력을 채워 넣을 시간입니다.";
+            desc.innerHTML = "단순한 휴식이 필요한 것이 아니라, 다시 일어설 '정수'가 필요한 시점입니다.<br>최상의 퍼포먼스를 위해, 당신의 내면에<br>가장 귀한 생명력을 채워 넣을 시간입니다.";
         }
         nextStep(1); 
     }
@@ -139,31 +135,31 @@
               proof = document.getElementById('proof-section'), rDesc = document.getElementById('res-desc');
         
         let content = "";
-        if(score >= 9) { // 공진단 라인
+        if(score >= 9) { // 공진단
             const isWonbang = score >= 13;
             pName.innerText = isWonbang ? "원방 씨알공진단 (30환)" : "실속 씨알공진단 (30환)";
             pImg.src = isWonbang ? "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/4_wonbang_30.png" : "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/5_silsok_30.png";
-            pPrice.innerText = isWonbang ? "210만원" : "115만원"; pOld.innerText = isWonbang ? "270만원" : "150만원"; pPct.innerText = isWonbang ? "22% OFF";
+            pPrice.innerText = isWonbang ? "210만원" : "115만원"; pOld.innerText = isWonbang ? "270만원" : "150만원"; pPct.innerText = isWonbang ? "22% OFF" : "23% OFF";
             pInfo.innerText = isWonbang ? "사향 100mg / 녹용 4배 함량" : "사향 40mg 함량 핵심 처방";
             rDesc.innerHTML = type === 'parent' ? "부모님의 고갈된 기력을 즉각적으로 채워줄<br>가장 품격 있는 처방이 시급합니다." : "당신의 무너진 생체 엔진을 다시 가동할<br>고농축 에너지원이 필요합니다.";
             
-            content = `<h3 class="serif" style="text-align:center;">정수의 보존, 씨알(Sial) 공법</h3>
-                       <p style="font-size:0.95rem; text-align:center; margin-bottom:20px;">귀한 사향을 중심에 핵(Nucleus)처럼 응축시켜 유효 성분의 소실을 막고 기운을 극대화한 독보적 기술력입니다.</p>
+            content = `<h3 class="serif" style="text-align:center;">특허로 증명된 정수의 보존</h3>
+                       <p style="font-size:0.95rem; text-align:center; margin-bottom:20px;">사향을 핵(Nucleus)처럼 중심에 응축시켜 유효 성분의 소실을 막고 흡수율을 극대화한 독보적 기술력입니다.</p>
                        <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/assure.png" class="data-img">
                        <img src="https://raw.githubusercontent.com/bodyallhani/gokkjd/main/bro2.png" class="data-img">
                        <p style="text-align:center; font-size:0.85rem; color:#666;">타사 대비 <b>녹용 함량 약 4배</b> (6g의 비밀)</p>`;
-        } else { // 경옥고/총명음 라인
+        } else { // 경옥고/총명음
             const isGyeong = score >= 7;
             pName.innerText = isGyeong ? "전통 경옥고 (3box)" : "총명음 (3box)";
             pImg.src = isGyeong ? "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/6_gyeongokgo.png" : "https://raw.githubusercontent.com/bodyallhani/gokkjd/main/7_chongmyeong.png";
-            pPrice.innerText = isGyeong ? "28만원" : "38만원"; pOld.innerText = isGyeong ? "36만원" : "48만원"; pPct.innerText = isGyeong ? "22% OFF";
+            pPrice.innerText = isGyeong ? "28만원" : "38만원"; pOld.innerText = isGyeong ? "36만원" : "48만원"; pPct.innerText = isGyeong ? "22% OFF" : "21% OFF";
             pInfo.innerText = isGyeong ? "72시간 옹기 숙성 전문의약품" : "인지 활력 및 두뇌 집중력 개선";
             rDesc.innerHTML = type === 'parent' ? "부모님의 메마른 진액을 채우고<br>근본적인 건강의 토대를 다질 시기입니다." : "탁해진 정신을 맑게 깨우고<br>지치지 않는 집중력을 유지할 처방입니다.";
             
-            content = `<h3 class="serif" style="text-align:center;">왜 식품이 아닌 '전문약'인가?</h3>
-                       <div class="card" style="font-size:0.95rem;">
+            content = `<h3 class="serif" style="text-align:center;">왜 식품이 아닌 '의약품'인가?</h3>
+                       <div class="card" style="font-size:0.95rem; border:1px solid #ddd;">
                         <b>1. hGMP 인증 의료 전용 약재</b><br>
-                        시중의 농산물 약재와 달리 엄격한 정밀 검사를 통과한 최상위 등급 한약재만을 처방합니다.<br><br>
+                        시중의 농산물 약재와 달리 중금속, 잔류 농약 정밀 검사를 십수 단계 통과한 최상위 등급 한약재만을 처방합니다.<br><br>
                         <b>2. 치료 목적의 고농축 조제</b><br>
                         대량 생산되는 건기식과는 질적으로 다른, 치료 효과를 내기 위한 최적의 농도를 고수합니다.
                        </div>`;
